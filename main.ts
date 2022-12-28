@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const {WebClient} = require('@slack/web-api');
+require('dotenv').config();
 
 async function createBlocks(githubToken, config, url, unfurlLinksContextStr): Promise<[channelId: string, blocks: any]> {
   type GithubInfo = {

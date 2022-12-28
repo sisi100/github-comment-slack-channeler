@@ -38,6 +38,7 @@ var _this = this;
 var core = require('@actions/core');
 var github = require('@actions/github');
 var WebClient = require('@slack/web-api').WebClient;
+require('dotenv').config();
 function createBlocks(githubToken, config, url, unfurlLinksContextStr) {
     return __awaiter(this, void 0, void 0, function () {
         function parseUrl(url) {
@@ -261,3 +262,4 @@ var SlackService = /** @class */ (function () {
         }
     });
 }); })();
+//# sourceMappingURL=main.js.map
