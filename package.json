@@ -16,7 +16,9 @@
     "eslint-config-google": "^0.14.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "tsc -w",
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",

@@ -129,7 +129,7 @@ function createBlocks(githubToken, config, url, unfurlLinksContextStr) {
                             return [4 /*yield*/, fetchComment(githubToken, params_1.owner, params_1.repoName, params_1.type, params_1.typeId)["catch"](function (e) { return console.error(e); })];
                         case 2:
                             res_1 = _a.sent();
-                            unfurlBody += "\n\nAuthor: " + res_1.data.user.login + " \nComment: " + res_1.data.body;
+                            unfurlBody += "\n\nAuthor: ".concat(res_1.data.user.login, " \nComment: ").concat(res_1.data.body);
                             _a.label = 3;
                         case 3:
                             i++;
@@ -186,14 +186,14 @@ function createBlocks(githubToken, config, url, unfurlLinksContextStr) {
                             'type': 'section',
                             'text': {
                                 'type': 'mrkdwn',
-                                'text': "*\u8CEA\u554F\u3084\u5171\u6709\u5185\u5BB9\u304C\u8FFD\u52A0\u3055\u308C\u307E\u3057\u305F\uFF01by " + comment.user.login + "*"
+                                'text': "*\u8CEA\u554F\u3084\u5171\u6709\u5185\u5BB9\u304C\u8FFD\u52A0\u3055\u308C\u307E\u3057\u305F\uFF01by ".concat(comment.user.login, "*")
                             }
                         },
                         {
                             'type': 'section',
                             'text': {
                                 'type': 'mrkdwn',
-                                'text': body + " \n\n <" + url + "|" + params.owner + "/" + params.repoName + "> | " + formatDate(comment.created_at)
+                                'text': "".concat(body, " \n\n <").concat(url, "|").concat(params.owner, "/").concat(params.repoName, "> | ").concat(formatDate(comment.created_at))
                             },
                             'accessory': {
                                 'type': 'image',
